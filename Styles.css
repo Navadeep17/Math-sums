@@ -1,0 +1,109 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    background: #f3f6fa;
+    color: #222;
+}
+
+.main-heading {
+    text-align: center;
+    margin-bottom: 35px;
+    color: #27364b;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.box {
+    background: white;
+    border-radius: 10px;
+    padding: 18px;
+    width: 350px;
+    height: 260px;
+    margin: 0 24px 24px 0;
+
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.09);
+
+    transition: transform 0.2s ease;
+}
+
+.box:hover {
+    transform: translateY(-3px);
+}
+
+.box h2 {
+    margin: 0 0 12px 0;
+    font-size: 17px;
+    text-align: center;
+    color: #1976d2;
+    border-bottom: 2px solid #eeeeee;
+    padding-bottom: 7px;
+}
+
+.field {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 9px;
+}
+
+.field label {
+    font-size: 14px;
+    color: #555;
+    flex-shrink: 0;
+}
+
+.field input {
+    flex: 1;
+    min-width: 0;
+    padding: 7px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.field input:focus {
+    outline: none;
+    border-color: #1976d2;
+}
+
+.box button {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    background: #1976d2;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.box button:hover {
+    background: #125ca0;
+}
+
+.answer {
+    margin-top: 11px;
+    font-weight: bold;
+    color: #27364b;
+    min-height: 18px;
+}
+
+.answer p {
+    margin: 0;
+}

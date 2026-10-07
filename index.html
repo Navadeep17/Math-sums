@@ -1,0 +1,308 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Calculation Tasks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1 class="main-heading">JavaScript Math Programs</h1>
+
+    <div class="container">
+
+        <!-- Average -->
+        <div class="box">
+            <h2>Average of Three Values</h2>
+
+            <div class="field">
+                <label>First value:</label>
+                <input type="number" placeholder="Example: 15" id="valueA">
+            </div>
+
+            <div class="field">
+                <label>Second value:</label>
+                <input type="number" placeholder="Example: 25" id="valueB">
+            </div>
+
+            <div class="field">
+                <label>Third value:</label>
+                <input type="number" placeholder="Example: 35" id="valueC">
+            </div>
+
+            <button onclick="calculateAverage()">Calculate</button>
+
+            <div class="answer" id="averageResult"></div>
+        </div>
+
+
+        <!-- DOM Average -->
+        <div class="box">
+            <h2>Average Using DOM</h2>
+
+            <div class="field">
+                <label>Number one:</label>
+                <input type="number" placeholder="Example: 10" id="domA">
+            </div>
+
+            <div class="field">
+                <label>Number two:</label>
+                <input type="number" placeholder="Example: 20" id="domB">
+            </div>
+
+            <div class="field">
+                <label>Number three:</label>
+                <input type="number" placeholder="Example: 30" id="domC">
+            </div>
+
+            <button onclick="calculateDomAverage()">Calculate</button>
+
+            <div class="answer" id="domResult"></div>
+        </div>
+
+
+        <!-- Natural Numbers -->
+        <div class="box">
+            <h2>Sum of Natural Numbers</h2>
+
+            <div class="field">
+                <label>Enter limit:</label>
+                <input type="number" placeholder="Example: 15" id="naturalLimit">
+            </div>
+
+            <button onclick="calculateNaturalSum()">Find Sum</button>
+
+            <div class="answer" id="naturalResult"></div>
+        </div>
+
+
+        <!-- Profit -->
+        <div class="box">
+            <h2>Profit Percentage</h2>
+
+            <div class="field">
+                <label>Market price:</label>
+                <input type="number" placeholder="Example: 150" id="selling">
+            </div>
+
+            <div class="field">
+                <label>Buying price:</label>
+                <input type="number" placeholder="Example: 120" id="cost">
+            </div>
+
+            <button onclick="calculateProfit()">Calculate</button>
+
+            <div class="answer" id="profitResult"></div>
+        </div>
+
+
+        <!-- Simple Interest -->
+        <div class="box">
+            <h2>Simple Interest</h2>
+
+            <div class="field">
+                <label>Amount:</label>
+                <input type="number" placeholder="Example: 5000" id="principal">
+            </div>
+
+            <div class="field">
+                <label>Years:</label>
+                <input type="number" placeholder="Example: 3" id="years">
+            </div>
+
+            <div class="field">
+                <label>Interest rate:</label>
+                <input type="number" placeholder="Example: 6" id="rate">
+            </div>
+
+            <button onclick="calculateInterest()">Calculate</button>
+
+            <div class="answer" id="interestResult"></div>
+        </div>
+
+
+        <!-- Triangle Angle -->
+        <div class="box">
+            <h2>Find Missing Triangle Angle</h2>
+
+            <div class="field">
+                <label>First angle:</label>
+                <input type="number" placeholder="Example: 50" id="triangleA">
+            </div>
+
+            <div class="field">
+                <label>Second angle:</label>
+                <input type="number" placeholder="Example: 80" id="triangleB">
+            </div>
+
+            <button onclick="calculateMissingAngle()">Find</button>
+
+            <div class="answer" id="triangleResult"></div>
+        </div>
+
+
+        <!-- Last Digit -->
+        <div class="box">
+            <h2>Find Last Digit</h2>
+
+            <div class="field">
+                <label>Enter number:</label>
+                <input type="number" placeholder="Example: 5678" id="lastNumber">
+            </div>
+
+            <button onclick="findLastDigit()">Find</button>
+
+            <div class="answer" id="lastResult"></div>
+        </div>
+
+
+        <!-- Remove Last Digit -->
+        <div class="box">
+            <h2>Remove Last Digit</h2>
+
+            <div class="field">
+                <label>Enter number:</label>
+                <input type="number" placeholder="Example: 5678" id="removeNumber">
+            </div>
+
+            <button onclick="removeLastDigit()">Remove</button>
+
+            <div class="answer" id="removeResult"></div>
+        </div>
+
+
+        <!-- First Digit -->
+        <div class="box">
+            <h2>Find First Digit</h2>
+
+            <div class="field">
+                <label>Enter number:</label>
+                <input type="number" placeholder="Example: 789" id="firstNumber">
+            </div>
+
+            <button onclick="findFirstDigit()">Find</button>
+
+            <div class="answer" id="firstResult"></div>
+        </div>
+
+
+        <!-- Five Digit -->
+        <div class="box">
+            <h2>First Digit of 5-Digit Number</h2>
+
+            <div class="field">
+                <label>Enter 5-digit number:</label>
+                <input type="number" placeholder="Example: 67891" id="fiveDigit">
+            </div>
+
+            <button onclick="findFiveDigitFirst()">Find</button>
+
+            <div class="answer" id="fiveResult"></div>
+        </div>
+
+
+        <!-- Celsius -->
+        <div class="box">
+            <h2>Celsius to Fahrenheit</h2>
+
+            <div class="field">
+                <label>Celsius:</label>
+                <input type="number" placeholder="Example: 30" id="celsiusValue">
+            </div>
+
+            <button onclick="convertToFahrenheit()">Convert</button>
+
+            <div class="answer" id="fahrenheitResult"></div>
+        </div>
+
+
+        <!-- Fahrenheit -->
+        <div class="box">
+            <h2>Fahrenheit to Celsius</h2>
+
+            <div class="field">
+                <label>Fahrenheit:</label>
+                <input type="number" placeholder="Example: 86" id="fahrenheitValue">
+            </div>
+
+            <button onclick="convertToCelsius()">Convert</button>
+
+            <div class="answer" id="celsiusResult"></div>
+        </div>
+
+
+        <!-- Salary -->
+        <div class="box">
+            <h2>Calculate Gross Salary</h2>
+
+            <div class="field">
+                <label>Basic pay:</label>
+                <input type="number" placeholder="Example: 25000" id="basicPay">
+            </div>
+
+            <div class="field">
+                <label>HRA:</label>
+                <input type="number" placeholder="Example: 6000" id="houseAllowance">
+            </div>
+
+            <div class="field">
+                <label>DA:</label>
+                <input type="number" placeholder="Example: 4000" id="dearnessAllowance">
+            </div>
+
+            <button onclick="calculateSalary()">Calculate</button>
+
+            <div class="answer" id="salaryResult"></div>
+        </div>
+
+
+        <!-- Swap With Third -->
+        <div class="box">
+            <h2>Swap Using Temporary Variable</h2>
+
+            <div class="field">
+                <label>Value X:</label>
+                <input type="number" placeholder="Example: 8" id="swapX">
+            </div>
+
+            <div class="field">
+                <label>Value Y:</label>
+                <input type="number" placeholder="Example: 12" id="swapY">
+            </div>
+
+            <button onclick="swapUsingTemp()">Swap</button>
+
+            <div class="answer" id="tempSwapResult"></div>
+        </div>
+
+
+        <!-- Swap Without Third -->
+        <div class="box">
+            <h2>Swap Without Temporary Variable</h2>
+
+            <div class="field">
+                <label>Value X:</label>
+                <input type="number" placeholder="Example: 15" id="swapPX">
+            </div>
+
+            <div class="field">
+                <label>Value Y:</label>
+                <input type="number" placeholder="Example: 25" id="swapPY">
+            </div>
+
+            <button onclick="swapWithoutTemp()">Swap</button>
+
+            <div class="answer" id="noTempResult"></div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+```
